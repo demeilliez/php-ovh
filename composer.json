@@ -16,11 +16,5 @@
         "squizlabs/php_codesniffer": "^3.5",
         "phpdocumentor/graphviz": "^2.0@dev",
         "symfony/flex": "^1.11"
-    },
-    "scripts": {
-        "auto-scripts": {
-            "cache:clear": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd"
-        }
     }
 }
