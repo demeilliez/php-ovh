@@ -35,6 +35,7 @@ use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
+use GuzzleHttp\Psr7\Query;
 use Psr\Http\Message\ResponseInterface;
 
 /**
@@ -263,7 +264,7 @@ class Api
                 }
             }
 
-            $query = \GuzzleHttp\Psr7\build_query($query);
+            $query = \GuzzleHttp\Psr7\Query::build($query);
 
             $url     = $request->getUri()->withQuery($query);
             $request = $request->withUri($url);
